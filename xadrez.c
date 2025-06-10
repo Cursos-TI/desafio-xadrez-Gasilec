@@ -37,6 +37,20 @@ int main() {
         c++;
     } while (c < rainha);
     
+//Movimento do cavalo - EM "L"
+    printf("\n\nMovimento do cavalo: \n\n");
+    int movimentocompleto = 1; // flag para controlar movimento em 'L'
+
+    while (movimentocompleto--) //repete até zerar
+    {
+        for (int i = 0; i < 2; i++) // i execulta pra 0 e pra 1, depois sai do laço e execulta o prinf do wilhe
+        {
+            printf("Cima\n"); // imprime "Cima" duas vezes
+        }
+        printf ("Direita\n"); // imprime "Direira" uma vezes
+
+        printf ("\n");
+    }
 
     return 0;
 }
