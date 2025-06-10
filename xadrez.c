@@ -4,6 +4,40 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+//Movimento do bispo - diagonal superior direita
+void movimetobispo(int casas){
+    if (casas > 0)
+    {
+        printf("\nCima\n");
+        printf("Direita");
+
+        movimetobispo(casas - 1);
+    }
+    
+}    
+
+//Movimento da torre - direita 
+void movimetotorre(int casas){
+    if (casas > 0)
+    {
+        printf("Direita\n");
+        
+        movimetotorre(casas - 1);
+    }
+    
+}
+
+//movimento da rainha - Esquerda
+void movimetorainha(int casas){
+    if (casas > 0)
+    {
+        printf("Esquerda\n");
+
+        movimetorainha(casas - 1);
+    }
+    
+}
+
 int main() {
 
  //movimento das peças
@@ -11,34 +45,18 @@ int main() {
  int torre = 5;
  int rainha = 8;
 
- //Movimento do bispo - diagonal superior direita
+
     printf("Movimentos do bispo: \n");
-    for (int a = 0; a < bispo; a++)
-    {
-        printf("\nCima\n");
-        printf("Direita");
-    }
+    movimetobispo(bispo);
 
-//Movimento da torre - direita 
-    printf("\n\nMovimento da torre: \n");
-    int b = 0;
-    while (b < torre)
-    {
-        printf ("\nDireita");
-        b++;
-    }
+    printf("\n\nMovimento da torre: \n\n");
+    movimetotorre(torre);
 
-//movimento da rainha - Esquerda
-    printf("\n\nMovimento da rainha: \n");
-    int c = 0;
-    do
-    {
-        printf("\nEsquerda");
-        c++;
-    } while (c < rainha);
+    printf("\nMovimento da rainha: \n\n");
+    movimetorainha(rainha);
     
 //Movimento do cavalo - EM "L"
-    printf("\n\nMovimento do cavalo: \n\n");
+    printf("\nMovimento do cavalo: \n\n");
     int movimentocompleto = 1; // flag para controlar movimento em 'L'
 
     while (movimentocompleto--) //repete até zerar
